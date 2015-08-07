@@ -3,11 +3,13 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="player" >
 		<form id="searchform">
-			<h3>Spotify player</h3>
+			<h3 style="font-family: sans-serif;">Spotify pink-version player</h3>
 			<input type="textfield" placeholder="Writte a song here" id="search" value="Taxi driver"></inpus>
 			<button type="submit">Search!</button>
 		</form>
@@ -25,7 +27,7 @@
 		  <p class="author">alt-J</p>
 
 		  <div class="seekbar">
-		    <progress value="5" max="30"></progress>
+		    <progress id="progress-bar" max="30"></progress>
 		  </div>
 		</div>
 		</div>
