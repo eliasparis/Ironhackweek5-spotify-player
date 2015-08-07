@@ -14,6 +14,7 @@ function getSong(event){
 		$('.title').text(thesong.name)
 		$('.author').text(thesong.artists[0].name)
 		$('.cover').html('<img src="' + thesong.album.images[0].url + '">')
+		$('.audiodiv').html('<audio src="'+ thesong.preview_url +'" class="js-player"></audio>')
 	}
 
 	function handleError(){
@@ -25,3 +26,15 @@ function getSong(event){
 }
 
 $('#searchform').submit(getSong);
+
+function playActions(){	
+	if ($('.btn-play').hasClass('playing')){
+		$('.js-player').trigger('pause');
+		$('.btn-play').removeClass('playing');
+	}else{
+		$('.js-player').trigger('play');
+		$('.btn-play').addClass('playing');
+	}
+}
+
+$('.btn-play').on('click',playActions);
