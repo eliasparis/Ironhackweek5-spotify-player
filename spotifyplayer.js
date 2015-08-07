@@ -64,8 +64,8 @@ function showModal(event){
 		html = [
 			'<div>',
 				'<div><img src="' + info.images[0].url+ '" style="max-height: 500px; max-width: 550px;"></div>',
-				'<div><p>Popularity : ' + info.popularity + '</p></div>',
-				'<div><p>Followers : ' + info.followers.total + '</p></div>',
+				'<div><p>Popularity : <b>' + info.popularity + '</b></p></div>',
+				'<div><p>Followers : <b>' + info.followers.total + '</b></p></div>',
 				'<div><a href="' + info.external_urls.spotify + '" target="_blank" >Open in Spotify</div>',
 			'</div>'
 		].join('\n');
