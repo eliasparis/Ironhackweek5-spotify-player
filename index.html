@@ -6,25 +6,27 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
-<body>
+<body style="background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  -webkit-transform:rotate(65deg);
+  background-clip: text;">
 	<div class="player" >
 		<form id="searchform">
-			<h3 style="font-family: sans-serif;">Spotify pink-version player</h3>
-			<input type="textfield" placeholder="Writte a song here" id="search" value="Taxi driver"></inpus>
+			<h3 style="font-family: sans-serif; color: #ff0084;">Spotify pink-version player</h3>
+			<input type="textfield" placeholder="Writte a song here" id="search"></inpus>
 			<button type="submit">Search!</button>
 		</form>
 	</div>
 
 	<div class="widget">
 		<div class="header">
-		<!-- Try adding/removing these classes: -->
-		<!-- disabled -->
-		<!-- playing -->
 		<div class="btn-play"></div>
 
 		<div class="metadata">
-		  <p class="title">Hunger of The Pine</p>
-		  <p class="author">alt-J</p>
+		  <p class="title"></p>
+		  <button type="button" class="author" data-toggle="modal" data-target="#myModal">
+  			
+		</button>
 
 		  <div class="seekbar">
 		    <progress id="progress-bar" max="30"></progress>
@@ -32,11 +34,27 @@
 		</div>
 		</div>
 		<div class="cover">
-		<img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+		<img src="">
 		</div>
 		<div class="audiodiv">
 			<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
 		</div>
+	</div>
+
+	<!-- Modal -->
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        <!-- Appended html -->
+	      </div>
+	    </div>
+	  </div>
 	</div>
 
 	<script type="text/javascript" src="./spotifyplayer.js"> </script>
